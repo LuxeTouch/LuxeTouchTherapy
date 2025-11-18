@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>LUXETOUCH MASSAGE | The Ultimate Relaxation Experience</title>
+    <meta name="description" content="Sensual full-body LuxeTouch massage in Los Angeles. Signature Nuru gel, body-to-body techniques for deep relaxation. Discreet, personalized sessions."/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --navy: #0f172a;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --teal: #0d9488;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--navy);
+            line-height: 1.7;
+        }
+        h1,h2,h3 { font-family: 'Playfair Display', serif; }
+
+        header {
+            background: rgba(15,23,42,0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        nav {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img { height: 80px; }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .hero p { font-size: 1.5rem; max-width: 800px; margin: 0 auto 2rem; }
+        .btn {
+            display: inline-block;
+            padding: 14px 34px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        .btn-gold { background: var(--gold); color: #000; }
+        .btn-gold:hover { background: #fff; transform: translateY(-5px); }
+
+        section { padding: 120px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h2 { font-size: 3.5rem; text-align: center; color: var(--navy); margin-bottom: 2rem; }
+        h3 { color: var(--gold); margin-bottom: 1rem; }
+
+        .intro-text { max-width: 800px; margin: 0 auto 4rem; text-align: center; font-size: 1.1rem; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .feature { text-align: center; padding: 1.5rem; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .service-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(212,175,55,0.2); }
+        .price { font-size: 1.8rem; color: var(--gold); font-weight: bold; margin: 1rem 0; }
+
+        .addons { background: var(--navy); color: white; padding: 3rem; text-align: center; margin: 4rem 0; border-radius: 20px; }
+        .addons h3 { color: var(--gold); font-size: 2.5rem; }
+
+        .policy { background: #f0f0f0; padding: 4rem 0; }
+        .policy h3 { color: var(--navy); margin-bottom: 1.5rem; }
+        .policy ul { list-style: none; padding-left: 0; }
+        .policy li { margin-bottom: 1rem; font-size: 1.1rem; }
+
+        .contact-section {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        .contact-section h2 { color: var(--gold); }
+        .contact-info p { font-size: 1.3rem; margin: 1.5rem 0; }
+        .contact-info a { color: var(--gold); text-decoration: none; }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            font-size: 1.1rem;
+        }
+        .hours-grid div:first-child { font-weight: 600; }
+
+        /* Contact Form - Exact match to screenshot */
+        .contact-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            color: var(--navy);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--teal); }
+        .contact-form button {
+            width: 100%;
+            background: var(--teal);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .contact-form button:hover { background: #0f766e; }
+        .checkbox { margin: 1rem 0; display: flex; align-items: flex-start; font-size: 0.9rem; }
+        .checkbox input { margin-right: 0.5rem; margin-top: 0.2rem; }
+
+        footer {
+            background: #000;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .nav-links { display: none; }
+            .hours-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="https://i.ibb.co/0jY6Y8F/luxetouch-logo-gold.png" alt="LUXETOUCH MASSAGE Logo"/>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Menu & Prices</a>
+                <a href="#addons">Add-Ons</a>
+                <a href="#policy">Policy</a>
+                <a href="#contact">Contact</a>
+                <a href="https://wa.me/2349166708051" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>LUXETOUCH MASSAGE</h1>
+            <p>THE ULTIMATE RELAXATION EXPERIENCE</p>
+            <div>
+                <a href="https://wa.me/2349166708051" class="btn btn-gold" target="_blank">Book via WhatsApp</a>
+                <a href="tel:+2349166708051" class="btn btn-gold">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="intro-text">
+                <p>Step into tranquility with Luxetouch Massage, where comfort, rejuvenation, and care come together in perfect harmony.</p>
+            </div>
+
+            <h2>Our Signature LuxeTouch Experience Includes:</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-spa" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <p>Warm, silky gel and soothing body techniques designed to release tension and promote deep relaxation.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-lightbulb" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <p>A calm, welcoming space with soft lighting and gentle music to ease your mind.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-check" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <p>Personalized attention to ensure every guest leaves refreshed and renewed.</p>
+                </div>
+            </div>
+
+            <h2>Why Choose LuxeTouch</h2>
+            <div class="features">
+                <div class="feature"><p>• Professional, discreet, and comfortable environment</p></div>
+                <div class="feature"><p>• Soothing ambiance with soft lighting and gentle music</p></div>
+                <div class="feature"><p>• Premium-quality gels and oils</p></div>
+                <div class="feature"><p>• Fully personalized sessions tailored to your needs</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>MENU & PRICES</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">MASSAGE SERVICES</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>1. CLASSIC LUXETOUCH RELAXATION</h3>
+                    <p>A soothing full-body massage using our signature slippery Nuru gel to melt away tension and promote deep calm.</p>
+                    <div class="price">60 min – $120 | 90 min – $160</div>
+                </div>
+                <div class="service-card">
+                    <h3>2. DEEP REJUVENATION MASSAGE</h3>
+                    <p>Combines LuxeTouch slippery techniques with firmer pressure to relieve muscle stiffness and restore balance.</p>
+                    <div class="price">75 min – $150 | 90 min – $180</div>
+                </div>
+                <div class="service-card">
+                    <h3>3. COUPLES LUXETOUCH EXPERIENCE</h3>
+                    <p>Share an intimate, candle-lit session with your partner using our luxurious Nuru gel.</p>
+                    <div class="price">90 min – $260 | 120 min – $320</div>
+                </div>
+                <div class="service-card">
+                    <h3>4. TROPICAL GLOW TREATMENT</h3>
+                    <p>Gentle full-body exfoliation followed by a warm, slippery gel massage – leaves your skin silky and glowing.</p>
+                    <div class="price">75 min – $170</div>
+                </div>
+                <div class="service-card">
+                    <h3>5. EXPRESS RENEWAL MASSAGE</h3>
+                    <p>Quick yet deeply relaxing LuxeTouch session – perfect for lunchtime or when you’re short on time.</p>
+                    <div class="price">30 min – $70</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="addons" class="addons">
+        <div class="container">
+            <h3>ADD-ONS/ENHANCEMENTS ("HAPPY ENDINGS")</h3>
+            <p style="font-size: 1.5rem;">DM for price.</p>
+        </div>
+    </section>
+
+    <section id="policy" class="policy">
+        <div class="container">
+            <h2>LUXETOUCH MASSAGE – BOOKING & PAYMENT POLICY</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem;">At LuxeTouch Massage, we value your time and strive to provide every client with a peaceful, personalized experience. Due to high demand and limited daily appointments, we kindly ask all guests to follow the policy below:</p>
+
+            <h3>Advance Bookings</h3>
+            <p>To secure your preferred time and therapist, we recommend booking at least 24–48 hours ahead. Same-day appointments may be available occasionally but cannot be guaranteed.</p>
+
+            <h3>Down Payment Requirement</h3>
+            <p>A refundable down payment is required at the time of reservation.</p>
+            <ul>
+                <li>$80 for individual sessions</li>
+                <li>$160 for couples sessions</li>
+                <li>The deposit will be fully applied toward your total service cost on the day of your appointment.</li>
+            </ul>
+
+            <h3>Refund & Cancellation Policy</h3>
+            <ul>
+                <li>Cancellations or rescheduling with at least 12 hours’ notice → full deposit refund</li>
+                <li>Cancellations less than 12 hours before the appointment or no-shows → deposit forfeited</li>
+                <li>Refunds are processed within 3–5 business days of cancellation.</li>
+            </ul>
+
+            <h3>Our Commitment</h3>
+            <p>We understand that plans can change unexpectedly and will always do our best to accommodate your needs. Your understanding and cooperation help us maintain fair scheduling and quality service for every client.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Reach Out Today!</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 0.5rem;"></i> <a href="tel:+2349166708051">+234 916 670 8051</a></p>
+                <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 0.5rem;"></i> <a href="mailto:LuxeTouchTherapy1@gmail.com">LuxeTouchTherapy1@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 0.5rem;"></i> 404 S Figueroa St #302, Los Angeles, CA 90071, USA</p>
+            </div>
+
+            <div class="hours-grid">
+                <div>Hours</div>
+                <div></div>
+                <div>Monday</div>
+                <div>9:00am – 10:00pm</div>
+                <div>Tuesday</div>
+                <div>9:00am – 11:00pm</div>
+                <div>Wednesday</div>
+                <div>9:00am – 10:00pm</div>
+                <div>Thursday</div>
+                <div>9:00am – 10:00pm</div>
+                <div>Friday</div>
+                <div>9:00am – 10:00pm</div>
+                <div>Saturday</div>
+                <div>9:00am – 11:00pm</div>
+                <div>Sunday</div>
+                <div>10:00am – 12:00pm</div>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Name *" required>
+                    <input type="email" placeholder="Email address *" required>
+                    <input type="tel" placeholder="Phone number *" required>
+                    <textarea rows="4" placeholder="Message"></textarea>
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        <span>I allow this website to store my submission* so they can respond to my inquiry.</span>
+                    </label>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+
+            <a href="https://wa.me/2349166708051" class="btn btn-gold" target="_blank" style="margin-top: 2rem;">Message on WhatsApp Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 LUXETOUCH MASSAGE – The Ultimate Relaxation Experience</p>
+    </footer>
+
+</body>
+</html>
